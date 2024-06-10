@@ -1,31 +1,30 @@
-# AI-IMAGE-GENERATION-APP
+here are the steps to use the AI Image Generation App:
 
-## To use the website you need to have:
+Setup Environment Variables:
+Create a .env file in the server folder of the project and add the following secrets:
 
--MONGODB_URL=""
+makefile
+Copy code
+MONGODB_URL=""
+OPENAI_API_KEY=""
+CLOUDINARY_CLOUD_NAME=""
+CLOUDINARY_API_KEY=""
+CLOUDINARY_API_SECRET=""
+Run the Backend:
+Open a terminal and navigate to the server folder of the project:
 
--OPENAI_API_KEY=""
-
--CLOUDINARY_CLOUD_NAME=""
-
--CLOUDINARY_API_KEY=""
-
--CLOUDINARY_API_SECRET=""
-
-Step 1: Add the following secrets to a .env file in the server folder
-
-Step 2: To run the backend, use the following commands in the terminal
-```
+arduino
+Copy code
 cd server
 npm run start
-```
+Run the Frontend:
+Open another terminal session and navigate to the client folder:
 
-Step 3: To run the frontend, use the following commands in a new terminal session
-```
+bash
+Copy code
 cd ..
 cd client
 npm run dev
-```
-
-Step 4: Navigate to the link in your terminal to view the website!
+View the Website:
+Navigate to the link provided in your terminal to view the website.
 
