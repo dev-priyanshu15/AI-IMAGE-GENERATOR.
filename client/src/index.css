@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Styles */
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Responsive Card Styling */
+@media screen and (min-width: 480px) {
+    .card:nth-child(7n + 1) {
+        grid-column: auto / span 2;
+        grid-row: auto / span 2;
+    }
+}
+
+/* Custom Scrollbar for Prompt */
+.prompt::-webkit-scrollbar {
+    width: 5px;
+}
+
+.prompt::-webkit-scrollbar-thumb {
+    background-color: #B0B0B0; /* Light Grey */
+    border-radius: 5px;
+}
+
+/* Social Links Container */
+.social_links {
+    background-color: #F5F5DC; /* Beige */
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+}
+
+/* Social Icons List */
+ul {
+    position: relative;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+/* Social Icons List Items */
+ul li {
+    list-style: none;
+    margin: 0 20px;
+    padding-top: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Social Icons Links */
+ul li a {
+    text-decoration: none;
+    position: relative;
+}
+
+/* Social Icons Styles */
+ul li a .fa-brands {
+    font-size: 2em;
+    color: #333; /* Dark Grey */
+}
+
+/* Social Icons Hover Effect */
+ul li a::before {
+    font-family: "FontAwesome";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 2em;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+}
+
+/* Specific Social Icons */
+ul li:nth-child(1) a::before {
+    content: "\f099";
+    color: #A9A9A9; /* Dark Beige */
+    border-bottom: 4px solid #A9A9A9; /* Dark Beige */
+}
+
+ul li:nth-child(2) a::before {
+    content: "\f09b";
+    color: #D3D3D3; /* Light Grey */
+    border-bottom: 4px solid #D3D3D3; /* Light Grey */
+}
+
+ul li:nth-child(3) a::before {
+    content: "\f16d";
+    background-image: linear-gradient(
+        45deg,
+        #C0C0C0 0%,   /* Silver */
+        #A9A9A9 25%,  /* Dark Beige */
+        #808080 50%,  /* Grey */
+        #696969 75%,  /* Dim Grey */
+        #505050 100%  /* Darker Grey */
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 4px solid #808080; /* Grey */
+}
+
+ul li:nth-child(4) a::before {
+    content: "\f08c";
+    color: #808080; /* Grey */
+    border-bottom: 4px solid #808080; /* Grey */
+}
+
+/* Hover Effect on Social Icons */
+ul li:hover a::before {
+    height: 100%;
+}
