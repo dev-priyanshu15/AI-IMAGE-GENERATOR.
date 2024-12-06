@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Loader, Card, FormField } from "../components";
 
+/**
+ * Renders a list of cards or a title based on the provided data
+ * @param {Object} props - The component props
+ * @param {Array} props.data - An array of post objects to be rendered as cards
+ * @param {string} props.title - The title to display when there's no data
+ * @returns {JSX.Element} A list of Card components or a title heading
+ */
 const RenderCards = ({ data, title }) => {
   if (data?.length > 0) {
     return (
@@ -13,6 +20,10 @@ const RenderCards = ({ data, title }) => {
   );
 };
 
+/**
+ * Renders the Home component, which displays a collection of AI-generated images with search functionality.
+ * @returns {JSX.Element} A section containing a title, description, search field, and a grid of image cards.
+ */
 const Home = () => {
   const [loading, setLoading] = useState(false);
   const [allPosts, setAllPosts] = useState(null);

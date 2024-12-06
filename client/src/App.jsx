@@ -5,6 +5,10 @@ import{Home , CreatePost} from "./pages"
 import punycode from 'punycode'
 import {SocialMedia} from "./components"
 
+/**
+ * Renders the main application component
+ * @returns {JSX.Element} The rendered application structure
+ */
 const App = () => {
   return (
     <BrowserRouter>
