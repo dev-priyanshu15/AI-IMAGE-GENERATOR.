@@ -1,30 +1,81 @@
-here are the steps to use the AI Image Generation App:
+# AI Image Generation App
 
-Setup Environment Variables:
-Create a .env file in the server folder of the project and add the following secrets:
+A web application that allows users to generate, share and download AI-generated images using DALL-E API.
 
-makefile
-Copy code
-MONGODB_URL=""
-OPENAI_API_KEY=""
-CLOUDINARY_CLOUD_NAME=""
-CLOUDINARY_API_KEY=""
-CLOUDINARY_API_SECRET=""
-Run the Backend:
-Open a terminal and navigate to the server folder of the project:
+## Features
 
-arduino
-Copy code
+- Generate unique images using OpenAI's DALL-E API
+- Share generated images with the community
+- Browse and download images created by other users
+- Responsive web design with modern UI/UX
+- MongoDB integration for storing image data
+- Image hosting via Cloudinary
+
+## Prerequisites
+
+Before running the application, make sure you have:
+- Node.js installed
+- NPM package manager
+- MongoDB account
+- OpenAI API key
+- Cloudinary account
+
+## Setup and Installation
+
+### 1. Environment Variables
+
+Create a `.env` file in the `server` directory with the following variables:
+
+```
+MONGODB_URL="your_mongodb_connection_string"
+OPENAI_API_KEY="your_openai_api_key"
+CLOUDINARY_CLOUD_NAME="your_cloudinary_cloud_name"
+CLOUDINARY_API_KEY="your_cloudinary_api_key"
+CLOUDINARY_API_SECRET="your_cloudinary_secret"
+```
+
+### 2. Running the Backend
+
+Navigate to the server directory and start the backend:
+
+```bash
 cd server
+npm install
 npm run start
-Run the Frontend:
-Open another terminal session and navigate to the client folder:
+```
 
-bash
-Copy code
-cd ..
+### 3. Running the Frontend
+
+In a new terminal, navigate to the client directory and start the frontend:
+
+```bash
 cd client
+npm install
 npm run dev
-View the Website:
-Navigate to the link provided in your terminal to view the website.
+```
 
+### 4. Accessing the Application
+
+Once both servers are running, open your browser and navigate to the URL provided in the terminal (typically `http://localhost:5173`).
+
+## Project Structure
+
+- `/client` - React frontend application
+  - `/src/components` - Reusable UI components
+  - `/src/pages` - Main application pages
+  - `/src/utils` - Utility functions
+- `/server` - Express backend application
+  - `/mongodb` - Database models and connection
+  - `/routes` - API endpoints
+
+## Technologies Used
+
+- Frontend: React, Tailwind CSS, Vite
+- Backend: Express.js, Node.js
+- Database: MongoDB
+- Image Generation: DALL-E API
+- Image Storage: Cloudinary
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
