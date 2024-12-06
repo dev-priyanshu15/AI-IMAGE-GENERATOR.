@@ -19,6 +19,12 @@ app.get("/",  async(req,res)=>{
     res.send("Hello from DALL-E!")
 })
 
+/**
+ * Starts the server and connects to the database.
+ * @async
+ * @returns {Promise<void>} A promise that resolves when the server has started successfully.
+ * @throws {Error} If there's an error connecting to the database or starting the server.
+ */
 const startServer = async()=>{
     try{
         connectDB(process.env.MONGODB_URL)

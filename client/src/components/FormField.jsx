@@ -1,5 +1,18 @@
 import React from 'react'
 
+/**
+ * Renders a form field component with optional "Surprise Me" button
+ * @param {Object} props - The properties passed to the component
+ * @param {string} props.labelName - The label text for the form field
+ * @param {string} props.type - The input type (e.g., 'text', 'number', etc.)
+ * @param {string} props.name - The name attribute for the input field
+ * @param {string} props.placeholder - The placeholder text for the input field
+ * @param {string} props.value - The current value of the input field
+ * @param {Function} props.handelChange - The function to handle input changes
+ * @param {boolean} props.isSupriseMe - Flag to show/hide the "Surprise Me" button
+ * @param {Function} props.handelSupriseMe - The function to handle "Surprise Me" button click
+ * @returns {JSX.Element} A form field component with label and input
+ */
 const FormField = ({labelName,type,name,placeholder,value,handelChange ,isSupriseMe,handelSupriseMe}) => {
   return (
     <div>
