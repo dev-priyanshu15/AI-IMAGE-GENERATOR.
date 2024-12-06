@@ -5,6 +5,10 @@ import { preview } from "../assets"
 import { getRandomPrompt } from "../utils"
 import { FormField, Loader } from '../components'
 
+/**
+ * Creates a post with an AI-generated image based on user input.
+ * @returns {JSX.Element} A form section for creating and sharing AI-generated images.
+ */
 const CreatePost = () => {
   const navigate = useNavigate()
   const [form, setForm] = useState({
